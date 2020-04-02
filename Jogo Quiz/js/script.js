@@ -4,7 +4,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
-var reflesh = 0;
+var reflesh = false;
 var score = 0;
 
 
@@ -84,7 +84,7 @@ function selectAnswer(e) {
 
 
 function RefleshTheGame() {
-  if(reflesh==1){
+  if(reflesh==true){
     window.location.reload();
   }
 
@@ -98,7 +98,7 @@ function Score() {
    document.getElementById("demo").innerHTML = "Você Acertou "+score+" perguntas de "+questions.length+" no total";
    }
    score=0;
-   reflesh = 1;
+   reflesh = true;
 }
 
 function setStatusClass(element, correct) {
@@ -172,8 +172,5 @@ const questions = [
       { text: 'É uma ação jurídica iniciada, geralmente por um advogado, onde se espera que um juiz de direito emita uma decisão sobre a violação de um direito.', correct: false }
       
     ]
-  }
-  
-
-
+  } 
 ]
